@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shares_tables",
+  "info": {
+    "singularName": "shares-table",
+    "pluralName": "shares-tables",
+    "displayName": "shares_table",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Aktien": {
+      "type": "string"
+    },
+    "Anteil_am_Depot": {
+      "type": "biginteger"
+    },
+    "ISIN_WKN": {
+      "type": "biginteger"
+    },
+    "Kaufdatum": {
+      "type": "date"
+    },
+    "Anzahl_Anteile": {
+      "type": "biginteger"
+    },
+    "Kaufpreis_pro_Anteil": {
+      "type": "decimal"
+    },
+    "Transaktionskosten": {
+      "type": "decimal"
+    },
+    "Gesamtpreis": {
+      "type": "decimal"
+    },
+    "Gesamtwert_Position": {
+      "type": "decimal"
+    },
+    "Aktueller_Marktpreis_pro_Anteil": {
+      "type": "decimal"
+    },
+    "Aktueller_Wert": {
+      "type": "decimal"
+    },
+    "Gewinn": {
+      "type": "decimal"
+    },
+    "Performance": {
+      "type": "decimal"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "shares_tables"
+    }
+  }
+}
